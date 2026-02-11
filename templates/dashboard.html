@@ -1,0 +1,14 @@
+<h2>Welcome</h2>
+
+<form method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <button type="submit">Upload</button>
+</form>
+
+<h3>Your Files:</h3>
+{% for file in files %}
+  <a href="/download/{{file}}">{{file}}</a><br>
+{% endfor %}
+
+<br><br>
+<a href="/logout">Logout</a>
